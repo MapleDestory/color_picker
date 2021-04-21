@@ -32,6 +32,7 @@ Partial Class Form1
         Me.RadioButton3 = New System.Windows.Forms.RadioButton()
         Me.TextBox4 = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
         Me.SuspendLayout()
         '
         'Panel1
@@ -101,6 +102,7 @@ Partial Class Form1
         Me.RadioButton1.Name = "RadioButton1"
         Me.RadioButton1.Size = New System.Drawing.Size(14, 13)
         Me.RadioButton1.TabIndex = 548548
+        Me.RadioButton1.TabStop = True
         Me.RadioButton1.UseVisualStyleBackColor = True
         '
         'RadioButton2
@@ -130,7 +132,7 @@ Partial Class Form1
         Me.TextBox4.BackColor = System.Drawing.Color.White
         Me.TextBox4.Location = New System.Drawing.Point(193, 89)
         Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(115, 20)
+        Me.TextBox4.Size = New System.Drawing.Size(53, 20)
         Me.TextBox4.TabIndex = 3
         Me.TextBox4.Text = "255"
         '
@@ -143,12 +145,23 @@ Partial Class Form1
         Me.Label1.TabIndex = 9
         Me.Label1.Text = "Alpha:"
         '
+        'CheckBox1
+        '
+        Me.CheckBox1.AutoSize = True
+        Me.CheckBox1.Location = New System.Drawing.Point(252, 91)
+        Me.CheckBox1.Name = "CheckBox1"
+        Me.CheckBox1.Size = New System.Drawing.Size(56, 17)
+        Me.CheckBox1.TabIndex = 548549
+        Me.CheckBox1.Text = "RGBA"
+        Me.CheckBox1.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AcceptButton = Me.Button1
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(321, 163)
+        Me.Controls.Add(Me.CheckBox1)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.TextBox4)
         Me.Controls.Add(Me.RadioButton3)
@@ -177,4 +190,5 @@ Partial Class Form1
     Friend WithEvents RadioButton3 As RadioButton
     Friend WithEvents TextBox4 As TextBox
     Friend WithEvents Label1 As Label
+    Friend WithEvents CheckBox1 As CheckBox
 End Class

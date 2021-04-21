@@ -6,9 +6,15 @@
         Try
             If (colors.ShowDialog() = DialogResult.OK) Then
                 Me.Panel1.BackColor = colors.Color
-                Me.TextBox1.Text = colors.Color.Name
-                Me.TextBox2.Text = colors.Color.A.ToString() + ", " + colors.Color.R.ToString() + ", " + colors.Color.G.ToString() + ", " + colors.Color.B.ToString()
-                Me.TextBox3.Text = Decimal.ToDouble(Convert.ToInt32(Me.TextBox4.Text) / 255).ToString() + ", " + Decimal.ToDouble(colors.Color.R / 255).ToString() + ", " + Decimal.ToDouble(colors.Color.G / 255).ToString() + ", " + Decimal.ToDouble(colors.Color.B / 255).ToString()
+                If (Me.CheckBox1.Checked = True) Then
+                    Me.TextBox1.Text = colors.Color.Name
+                    Me.TextBox2.Text = colors.Color.R.ToString() + ", " + colors.Color.G.ToString() + ", " + colors.Color.B.ToString() + ", " + colors.Color.A.ToString()
+                    Me.TextBox3.Text = Decimal.ToDouble(colors.Color.R / 255).ToString() + ", " + Decimal.ToDouble(colors.Color.G / 255).ToString() + ", " + Decimal.ToDouble(colors.Color.B / 255).ToString() + ", " + Decimal.ToDouble(Convert.ToInt32(Me.TextBox4.Text) / 255).ToString()
+                Else
+                    Me.TextBox1.Text = colors.Color.Name
+                    Me.TextBox2.Text = colors.Color.A.ToString() + ", " + colors.Color.R.ToString() + ", " + colors.Color.G.ToString() + ", " + colors.Color.B.ToString()
+                    Me.TextBox3.Text = Decimal.ToDouble(Convert.ToInt32(Me.TextBox4.Text) / 255).ToString() + ", " + Decimal.ToDouble(colors.Color.R / 255).ToString() + ", " + Decimal.ToDouble(colors.Color.G / 255).ToString() + ", " + Decimal.ToDouble(colors.Color.B / 255).ToString()
+                End If
             End If
         Catch ex As Exception
 
